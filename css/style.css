@@ -23,9 +23,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
 }
@@ -48,21 +45,21 @@ table {
     margin: 0;
     padding: 0;
 }
-html, body {
+html, body{
     scroll-behavior: smooth;
 }
 
-body {
+body{
     margin: 0 auto;
     width: 1200px;
     background: grey;
 }
 
-.textmain.textpages2 {
+.textmain.textpages2{
     text-align: justify;
 }
 
-header {
+header{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,51 +68,51 @@ header {
     height: 80px;
 }
 
-h2 {
+h2{
     font-size: 24px;
     font-weight: 600;
     margin: 10px 0;
     text-align: center;
 }
 
-.contentTypes {
+.contentTypes{
     padding: 5px 0;
 }
-h1 {
+h1{
     font-size: 32px;
     font-weight: 900;
     text-align: center;
 }
 
-h3 {
+h3{
     font-size: 20px;
     font-weight: 600;
     text-align: center;
 }
 
-.list {
+.list{
     margin: 0 0 0 15px;
     text-align: left;
     list-style-type: circle;
     font-style: italic;
 }
 
-footer {
+footer{
     height: 160px;
     background: black;
     color: white;
 }
 
-.footerlink:hover {
+.footerlink:hover{
     color: red;
 }
 
-a {
+a{
     line-height: 25px;
     color: white;
 }
 
-.footerP {
+.footerP{
     text-align: center;
 }
 .moveon:hover{
@@ -124,15 +121,14 @@ a {
 
 /* Про електронні сигарети */
 
-#firstimg {
+#firstimg{
     margin: 10px 0 0 0;
     border-radius: 50px; 
 }
-#pictures {
+#pictures{
     text-align: center;
 }
-
-.button {
+.button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,11 +140,55 @@ a {
     text-decoration: none;
     margin: 0 auto 10px;
 }
-
-.button:hover {
+.button:hover{
     opacity: 0.7;
 }
 
 .photo{
     text-align: center;
 }
+
+/* dz_6 */
+/* table-cell */
+
+.outl{
+    outline: 2px solid black;
+}
+.w_800{
+    width: 800px;
+    outline: 2px solid black;
+}
+.w_400{
+    width: 400px;
+    outline: 2px solid black;
+}
+.d_t_c{
+    display: table-cell;
+}
+.topcolor{
+    background: green;
+}
+.cont{
+    background: purple;
+}
+.info{
+    background: gold;
+}
+.col{
+    background: yellowgreen;
+}
+
+/* inline-block */
+
+.d_i_b{
+    display: inline-block;
+}
+.content_i_b{
+    font-size: 0;
+}
+.i_b_fs{
+    font-size: 18px;
+}
+
+
+
