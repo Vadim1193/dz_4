@@ -48,8 +48,10 @@ table {
 html, body{
     scroll-behavior: smooth;
 }
-
-body{
+body {
+    background: gray;
+}
+.cont_ol{
     margin: 0 auto;
     width: 1200px;
     background: grey;
