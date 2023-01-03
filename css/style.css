@@ -206,3 +206,17 @@ a{
 .back{
     padding: 30px 0 0 0 ;
 }
+
+/* display-flex */
+.disp_fl_cont{
+    background: lightcoral;
+}
+.disp_fl{
+    display: flex;
+}
+.fl_800{
+    flex: 0 1 800px;
+}
+.fl_400{
+    flex: 0 1 400px;
+}
