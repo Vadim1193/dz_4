@@ -220,3 +220,11 @@ a{
 .fl_400{
     flex: 0 1 400px;
 }
+
+/* display-flex */
+
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
