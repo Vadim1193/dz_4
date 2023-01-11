@@ -56,20 +56,15 @@ body {
     width: 1200px;
     background: grey;
 }
-
 .textmain.textpages2{
     text-align: justify;
 }
-
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.box_top{
+    display: block;
     background: black;
     color: white;
-    height: 80px;
+    height: auto;
 }
-
 h2{
     font-size: 24px;
     font-weight: 600;
@@ -80,6 +75,7 @@ h2{
     padding-bottom: 10px;
 }
 h1{
+    padding: 10px 0;
     font-size: 32px;
     font-weight: 900;
     text-align: center;
@@ -98,7 +94,7 @@ h3{
     font-style: italic;
 }
 
-footer{
+.down{
     height: 160px;
     background: black;
     color: white;
@@ -178,6 +174,9 @@ a{
 .col{
     background: yellowgreen;
 }
+.distance{
+    margin-top: 10px;
+}
 
 /* inline-block */
 
@@ -212,7 +211,8 @@ a{
 }
 
 /* display-flex */
-.disp_fl_cont{
+
+.disp_fl_col{
     background: lightcoral;
 }
 .disp_fl{
@@ -252,6 +252,10 @@ a{
 }
 /* grid-template-areas */
 
+.grid_box_top{
+    width: 1200px;
+    margin: 0 auto;
+}
 .grid_container{
     display: grid;
     grid-template-areas: 
@@ -355,9 +359,7 @@ a{
 .link_n:hover{
     color: red;
 }
-ul>li:last-child{
-    text-align: center;
-}
+
 /* ДЗ 10. Фотогалерея. */
 .picture {
     position: relative;
@@ -394,4 +396,69 @@ ul>li:last-child{
 }
 .art7 {
     max-width: 1188px;
+}
+
+/* ДЗ 11. Багаторівневе меню */
+
+.menu_top li{
+    display: inline-block;
+    font-size: 20px;
+    border-left: 1px solid red;
+    background: black;
+}
+.menu_top{
+    font-size: 0;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.menu_top li:hover{
+    outline: 1px solid white;
+}
+.menu_top a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.menu_top li:first-child{
+    border: none;
+}
+.parent{
+    position: relative;
+    z-index: 5;
+}
+.parent:hover ul.second_menu{
+    display: block;
+}
+.second_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+.second_menu li{
+    border: none;
+    border-top: 1px solid red;
+    display: block;
+}
+.menu_float{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: none;
+}
+.menu_grid{
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    display: none;
+}
+.parent_grid:hover ul.menu_grid{
+    display: block;
+}
+.parent_float:hover ul.menu_float{
+    display: block;
+}
+li.active{
+    outline: 1px solid white;
 }
