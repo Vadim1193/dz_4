@@ -63,7 +63,8 @@ body {
     display: block;
     background: black;
     color: white;
-    height: auto;
+    height: 118px;
+    /* height: auto; */
 }
 h2{
     font-size: 24px;
@@ -76,7 +77,7 @@ h2{
 }
 h1{
     padding: 10px 0;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 900;
     text-align: center;
 }
@@ -101,7 +102,7 @@ h3{
 }
 
 .footerlink:hover{
-    color: red;
+    text-decoration: none;
 }
 
 a{
@@ -138,15 +139,15 @@ a{
     margin: 0 auto 10px;
 }
 .button:hover{
-    opacity: 0.7;
+    background: white;
+    color: black;
 }
 
 .photo{
     text-align: center;
 }
 
-/* dz_6 */
-/* table-cell */
+/* dz_6 table-cell*/
 
 .outl{
     outline: 2px solid black;
@@ -226,6 +227,7 @@ a{
 }
 
 /* grid-template-columns */
+
 .ds_grid{
     display: grid;
 }
@@ -357,7 +359,7 @@ a{
     color: black;
 }
 .link_n:hover{
-    color: red;
+    color: white;
 }
 
 /* ДЗ 10. Фотогалерея. */
@@ -399,26 +401,25 @@ a{
 }
 
 /* ДЗ 11. Багаторівневе меню */
-
-.menu_top li{
-    display: inline-block;
-    font-size: 20px;
-    border-left: 1px solid red;
-    background: black;
-}
 .menu_top{
     font-size: 0;
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 10px;
 }
-.menu_top li:hover{
-    outline: 1px solid white;
+.menu_top li{
+    display: inline-block;
+    font-size: 20px;
+    border-left: 1px solid white;
+    background: black;
 }
 .menu_top a{
     display: block;
     text-decoration: none;
     padding: 10px 20px;
+}
+.menu_top a:hover,.parent:hover{
+    background: grey;
 }
 .menu_top li:first-child{
     border: none;
@@ -430,7 +431,7 @@ a{
 .parent:hover ul.second_menu{
     display: block;
 }
-.second_menu {
+.second_menu{
     position: absolute;
     top: 100%;
     left: 0;
@@ -438,7 +439,7 @@ a{
 }
 .second_menu li{
     border: none;
-    border-top: 1px solid red;
+    border-top: 1px solid white;
     display: block;
 }
 .menu_float{
@@ -459,6 +460,6 @@ a{
 .parent_float:hover ul.menu_float{
     display: block;
 }
-li.active{
-    outline: 1px solid white;
+.active a{
+    background: gray;
 }
