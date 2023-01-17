@@ -95,8 +95,7 @@ h3{
     font-style: italic;
 }
 
-.down{
-    height: 160px;
+.down {
     background: black;
     color: white;
 }
@@ -253,7 +252,10 @@ a{
     background: cornflowerblue;
 }
 /* grid-template-areas */
-
+.g-t-areas{
+    width: 1200px;
+    margin: 0 auto;
+}
 .grid_box_top{
     width: 1200px;
     margin: 0 auto;
@@ -406,7 +408,7 @@ a{
     background: black;
 }
 .menu_top a{
-    display: block;
+    display: inline-block;
     text-decoration: none;
     padding: 10px 20px;
 }
@@ -429,6 +431,9 @@ a{
     left: 0;
     display: none;
 }
+.second_menu a{
+    display: block;
+} 
 .second_menu li{
     border: none;
     border-top: 1px solid white;
@@ -446,12 +451,110 @@ a{
     bottom: 0;
     display: none;
 }
-.parent_grid:hover ul.menu_grid{
+.parent_grid:hover .menu_grid{
     display: block;
 }
-.parent_float:hover ul.menu_float{
+.parent_float:hover .menu_float{
     display: block;
-}
+} 
 .active a{
     background: gray;
+}
+/* ДЗ 12. Робота зі спрайтами. Позіоцінування елементу з фіксованими */
+
+.home_link::before{
+    content: "";
+    background: url(../img/dz_sprites.png) no-repeat -90px -10px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding-right: 3px;
+}
+.about_link::before{
+    content: "";
+    background: url(../img/dz_sprites.png) no-repeat -135px -10px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding-right: 3px;
+}
+.gallery_link::before{
+    content: "";
+    background: url(../img/dz_sprites.png) no-repeat -180px -7px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding-right: 3px;
+}
+.blocks_link::after{
+    content: "";
+    background: url(../img/dz_sprites.png) no-repeat -10px -5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: -20px;
+}
+.blocks_link:hover::after{
+    content: "";
+    background: url(../img/dz_sprites.png) no-repeat -50px -5px;
+}
+.float_link::after{
+    content: "";
+    background: url(../img/dz_sprites.png) no-repeat -270px -5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+.float_link:hover::after{
+    content: "";
+    background: url(../img/dz_sprites.png) no-repeat -225px -5px;
+}
+.grid_link::before{
+    content: "";
+    background: url(../img/dz_sprites.png) no-repeat -225px -5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+.grid_link:hover::before{
+    content: "";
+    background: url(../img/dz_sprites.png) no-repeat -270px -5px;
+}
+
+
+.facebook{
+    background: url(../img/dz_sprites.png) no-repeat -315px -10px;
+}   
+.telegtam{
+    background: url(../img/dz_sprites.png) no-repeat -375px -10px;
+}
+.instagram{
+    background: url(../img/dz_sprites.png) no-repeat -435px -10px;
+}
+.my_contacts{
+    position: relative;
+}
+.link_my_contacts{
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    font-size: 0;
+    list-style: none;
+}
+.link_my_contacts li{
+    display: inline-block;
+    margin-left: 5px;
+}
+.my_contacts a{
+    display: block;
+    width: 40px;
+    height: 40px;
+}    
+.link_my_contacts li:first-child{
+    margin: 0;
+} 
+.my_contacts a:hover{
+    opacity: 0.8;
+    outline: 2px solid white;
+    border-radius: 9px;
 }
