@@ -410,7 +410,8 @@ a{
 .menu_top a{
     display: inline-block;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 15px 8px 35px;
+    position: relative;
 }
 .menu_top a:hover,.parent:hover{
     background: grey;
@@ -433,6 +434,7 @@ a{
 }
 .second_menu a{
     display: block;
+    padding: 10px;
 } 
 .second_menu li{
     border: none;
@@ -461,63 +463,46 @@ a{
     background: gray;
 }
 /* ДЗ 12. Робота зі спрайтами. Позіоцінування елементу з фіксованими */
-
-.home_link::before{
+.menu_top a::before{
     content: "";
-    background: url(../img/dz_sprites.png) no-repeat -90px -10px;
-    display: inline-block;
     width: 25px;
     height: 25px;
-    padding-right: 3px;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+}
+.home_link::before{
+    background: url(../img/dz_sprites.png) no-repeat -90px -10px;  
 }
 .about_link::before{
-    content: "";
     background: url(../img/dz_sprites.png) no-repeat -135px -10px;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    padding-right: 3px;
 }
 .gallery_link::before{
-    content: "";
     background: url(../img/dz_sprites.png) no-repeat -180px -7px;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    padding-right: 3px;
 }
-.blocks_link::after{
-    content: "";
+a.blocks_link::before{
+    left: auto;
+    right: 0;
     background: url(../img/dz_sprites.png) no-repeat -10px -5px;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    margin-left: -20px;
 }
-.blocks_link:hover::after{
-    content: "";
+a.blocks_link{
+    padding: 10px 35px 8px 15px;
+}
+li.parent:hover a.blocks_link::before{
     background: url(../img/dz_sprites.png) no-repeat -50px -5px;
 }
-.float_link::after{
-    content: "";
+a.float_link::before{
+    left: auto;
+    right: 5px;
     background: url(../img/dz_sprites.png) no-repeat -270px -5px;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
 }
-.float_link:hover::after{
-    content: "";
+li.parent_float:hover a.float_link::before{
     background: url(../img/dz_sprites.png) no-repeat -225px -5px;
 }
-.grid_link::before{
-    content: "";
+.grid_link::before{ 
     background: url(../img/dz_sprites.png) no-repeat -225px -5px;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
 }
-.grid_link:hover::before{
-    content: "";
+li.parent_grid:hover a.grid_link::before{
     background: url(../img/dz_sprites.png) no-repeat -270px -5px;
 }
 
