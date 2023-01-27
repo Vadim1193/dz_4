@@ -415,6 +415,7 @@ a{
 }
 .menu_top a:hover,.parent:hover{
     background: grey;
+    transition: all 700ms linear;
 }
 .menu_top li:first-child{
     border: none;
@@ -424,13 +425,15 @@ a{
     z-index: 5;
 }
 .parent:hover ul.second_menu{
-    display: block;
+    top: 100%;
+    pointer-events: all;
 }
 .second_menu{
     position: absolute;
-    top: 100%;
     left: 0;
-    display: none;
+    top: -1000px;
+    transition: all cubic-bezier(0.24, 0.71, 0.88, 1.15) 700ms;
+    pointer-events: none;
 }
 .second_menu a{
     display: block;
@@ -444,21 +447,25 @@ a{
 .menu_float{
     position: absolute;
     left: 100%;
+    top: -1000px;
+    width: 0;
+    overflow: hidden;
+    transition: top 1s linear, width 2s steps(8, end);
+}
+.parent_float:hover .menu_float{
+    width: 100%;
     top: 0;
-    display: none;
 }
 .menu_grid{
     position: absolute;
     right: 100%;
     bottom: 0;
-    display: none;
+    opacity: 0;
+    transition: all 2s linear;
 }
 .parent_grid:hover .menu_grid{
-    display: block;
+    opacity: 1;
 }
-.parent_float:hover .menu_float{
-    display: block;
-} 
 .active a{
     background: gray;
 }
@@ -484,6 +491,7 @@ a.blocks_link::before{
     left: auto;
     right: 0;
     background: url(../img/dz_sprites.png) no-repeat -10px -5px;
+    transition: all 500ms ease;
 }
 a.blocks_link{
     padding: 10px 35px 8px 15px;
@@ -495,12 +503,15 @@ a.float_link::before{
     left: auto;
     right: 5px;
     background: url(../img/dz_sprites.png) no-repeat -270px -5px;
+    transition: all 400ms linear;
 }
 li.parent_float:hover a.float_link::before{
     background: url(../img/dz_sprites.png) no-repeat -225px -5px;
+
 }
 .grid_link::before{ 
     background: url(../img/dz_sprites.png) no-repeat -225px -5px;
+    transition: all 400ms ease;
 }
 li.parent_grid:hover a.grid_link::before{
     background: url(../img/dz_sprites.png) no-repeat -270px -5px;
