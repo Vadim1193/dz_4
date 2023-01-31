@@ -554,3 +554,139 @@ li.parent_grid:hover a.grid_link::before{
     outline: 2px solid white;
     border-radius: 9px;
 }
+
+/* D/Z 17. Transform. Filter */
+.animation_menu_left{
+    right: -12%;
+    top: 50%;
+    margin-top: -181px;
+    min-height: 360px;
+    position: fixed;
+    transform: rotate(-90deg);
+    font-size: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 1s linear;
+    transform: rotateX(28deg) rotateY(-18deg) rotateZ(-90deg);
+}
+.animation_menu_left:hover{
+    right: 0;
+    transform: rotate(0) rotateZ(-90deg);
+}
+.animation_menu_left h2{
+    margin: 0;
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    animation: anim_hover_me 3s ease-in-out infinite alternate 300ms;
+}
+.menu_fixed a{
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.menu_fixed a:hover{
+    background: white;
+    animation-play-state: paused;
+}
+.link_youtube{
+    transform: translateX(150px) translateY(86px) rotate(45deg);
+    animation: anim_youtube 1s ease-in infinite alternate 1500ms;
+}
+.link_twitter{
+    transform: translateX(104px) translateY(-23px) rotate(45deg);
+    animation: anim_twitter 1s ease-in infinite alternate 7s;
+}
+.link_hillel{
+    transform: translateX(104px) translateY(6px) rotate(45deg);
+    animation: anim_hillel 1s ease-in infinite alternate 3500ms;
+}
+.link_zoom{
+    transform: translateX(58px) translateY(-103px) rotate(45deg);
+    animation: anim_zoom 1s ease-in infinite alternate 1s;
+}
+.link_hillel:before, .link_twitter::before, .link_zoom::before, .link_youtube::before{
+    content: "";
+    background: url(../img/css_sprites.png) -10px -10px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    transform: rotate(45deg);
+}
+.link_twitter::before{
+    background: url(../img/css_sprites.png) -90px -10px;
+}
+.link_zoom::before{
+    background: url(../img/css_sprites.png) -90px -90px;
+}
+.link_youtube::before{
+    background: url(../img/css_sprites.png) -10px -90px;
+}
+@keyframes anim_zoom{
+    0%{
+        transform: translateX(58px) translateY(-103px) rotate(45deg);
+        border-radius: 15;
+    }
+    50%{
+        border-radius: 30px;
+    }
+    100%{
+        border-radius: 15;
+        transform: translateX(48px) translateY(-103px) rotate(45deg);
+    }
+}
+@keyframes anim_hillel{
+    0%{
+        transform: translateX(104px) translateY(6px) rotate(45deg);
+        border-radius: 15;
+    }
+    50%{
+        border-radius: 40px;
+    }
+    100%{
+        border-radius: 15;
+        transform: translateX(104px) translateY(16px) rotate(45deg);
+    }
+} 
+@keyframes anim_twitter{
+    0%{
+        transform: translateX(104px) translateY(-23px) rotate(45deg);
+        border-radius: 15;
+    }
+    50%{
+        border-radius: 40px;
+    }
+    100%{
+        border-radius: 15;
+        transform: translateX(104px) translateY(-33px) rotate(45deg);
+    }
+}
+@keyframes anim_youtube{
+    0%{
+        transform: translateX(150px) translateY(86px) rotate(45deg);
+        border-radius: 15;
+    }
+    50%{
+        border-radius: 40px;
+    }
+    100%{
+        border-radius: 15;
+        transform: translateX(160px) translateY(86px) rotate(45deg);
+    }
+}
+@keyframes anim_hover_me{
+    0%{
+        color: rgba(255, 255, 255, 0.2);
+        filter: blur(2px);
+    }
+    40%{
+        color: white;
+        filter: blur(0px);
+    }
+    100%{
+        color: white;
+        filter: blur(0px);
+    }
+}
