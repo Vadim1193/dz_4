@@ -560,16 +560,16 @@ li.parent_grid:hover a.grid_link::before{
     right: -12%;
     top: 50%;
     margin-top: -181px;
-    min-height: 360px;
+    /* min-height: 360px; */
     position: fixed;
-    transform: rotate(-90deg);
+    /* transform: rotate(-90deg); */
     font-size: 0;
     background: rgba(0, 0, 0, 0.5);
     transition: all 1s linear;
     transform: rotateX(28deg) rotateY(-18deg) rotateZ(-90deg);
 }
 .animation_menu_left:hover{
-    right: 0;
+    right: 1%;
     transform: rotate(0) rotateZ(-90deg);
 }
 .animation_menu_left h2{
