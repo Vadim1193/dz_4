@@ -55,7 +55,7 @@ html, body{
 }
 .cont_home{
     position: relative;
-    z-index: 10;
+    z-index: 5;
 }
 .textpages{
     text-align: justify;
@@ -574,6 +574,7 @@ li.parent_grid:hover a.grid_link::before{
     background: rgba(0, 0, 0, 0.5);
     transition: all 1s linear;
     transform: rotateX(28deg) rotateY(-18deg) rotateZ(-90deg);
+    z-index: 10;
 }
 .animation_menu_left:hover{
     right: 1%;
@@ -697,6 +698,7 @@ li.parent_grid:hover a.grid_link::before{
         filter: blur(0px);
     }
 }
+
 /* D/Z 18. Gradient */
 #home{
     position: relative;
@@ -704,22 +706,20 @@ li.parent_grid:hover a.grid_link::before{
 #home::before{
     background: radial-gradient(farthest-corner at 120% 0%,  rgba(255, 255,255, 0) 71%, rgba(0, 0, 0, 0.6) 73%);
     left: 0;
-    max-width: 100%;
     min-width: 55%;
+    max-width: 100%;
     content: "";
     position: absolute;
     height: 50%;
     bottom: 0;
-    pointer-events: none;
 }
 #home::after{
+    content: "";
     background: radial-gradient(farthest-corner at -20% 0%, rgba(255, 255,255, 0) 71%, rgba(0, 0, 0, 0.6) 73%);
     right: 0;
-    max-width: 100%;
     min-width: 55%;
-    content: "";
+    max-width: 100%;
     position: absolute;
     height: 50%;
     bottom: 0;
-    pointer-events: none;
 }
